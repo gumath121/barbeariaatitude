@@ -1,1 +1,976 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10110e">
+  <meta name="description" content="Atitude Barber — estilo, personalidade e atitude. Agende seu horário com John.">
+  <title>Atitude Barber — Seu estilo. Sua atitude.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #10110e;
+      --dark: #191a16;
+      --white: #f3f1e9;
+      --lime: #d6ff3f;
+      --gray: #85867d;
+      --line: rgba(243,241,233,.17);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: "DM Sans", sans-serif;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button, input, select { font: inherit; }
+
+    ::selection {
+      background: var(--lime);
+      color: var(--black);
+    }
+
+    .topline {
+      background: var(--lime);
+      color: var(--black);
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 10px 0;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee 24s linear infinite;
+    }
+
+    .marquee span { padding-right: 35px; }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    header {
+      height: 86px;
+      padding: 0 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      z-index: 10;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 27px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+    }
+
+    .brand-mark {
+      width: 37px;
+      height: 37px;
+      display: grid;
+      place-items: center;
+      background: var(--lime);
+      color: var(--black);
+      font-size: 24px;
+      transform: rotate(-8deg);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    nav a { transition: color .25s; }
+    nav a:hover { color: var(--lime); }
+
+    .nav-cta {
+      background: var(--lime);
+      color: var(--black);
+      padding: 14px 20px;
+    }
+
+    .hero {
+      min-height: 690px;
+      padding: 80px 6% 70px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 550px;
+      height: 550px;
+      right: 4%;
+      top: 10%;
+      border: 1px solid rgba(214,255,63,.22);
+      border-radius: 50%;
+      box-shadow: 0 0 0 55px rgba(214,255,63,.025),
+                  0 0 0 110px rgba(214,255,63,.018);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+    }
+
+    .eyebrow {
+      color: var(--lime);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    h1, h2, h3 {
+      font-family: "Barlow Condensed", sans-serif;
+      text-transform: uppercase;
+      line-height: .88;
+    }
+
+    h1 {
+      font-size: clamp(76px, 12vw, 164px);
+      font-weight: 900;
+      letter-spacing: -5px;
+    }
+
+    h1 span {
+      display: block;
+      color: var(--lime);
+    }
+
+    .hero-copy {
+      max-width: 390px;
+      margin-top: 30px;
+      color: #b9bab1;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 25px;
+      margin-top: 34px;
+    }
+
+    .button {
+      min-height: 54px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      padding: 0 25px;
+      background: var(--lime);
+      color: var(--black);
+      border: 0;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: .25s;
+    }
+
+    .button:hover {
+      background: var(--white);
+      transform: translateY(-3px);
+    }
+
+    .text-link {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--lime);
+      padding-bottom: 7px;
+    }
+
+    .hero-visual {
+      position: absolute;
+      right: 8%;
+      bottom: 0;
+      width: min(40%, 480px);
+      height: 88%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .hero-logo {
+      position: absolute;
+      width: 115%;
+      max-width: 550px;
+      opacity: .13;
+      object-fit: contain;
+      filter: grayscale(1);
+    }
+
+    .john-photo {
+      position: relative;
+      z-index: 1;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      object-position: bottom;
+      filter: grayscale(100%);
+      mix-blend-mode: screen;
+    }
+
+    .photo-placeholder {
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      border: 1px dashed rgba(214,255,63,.4);
+      background: linear-gradient(145deg, #292b23, #11120f);
+      color: var(--gray);
+      padding: 30px;
+    }
+
+    .photo-placeholder strong {
+      display: block;
+      color: var(--lime);
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 42px;
+      text-transform: uppercase;
+    }
+
+    .hero-visual .photo-placeholder {
+      min-height: 450px;
+      height: 100%;
+    }
+
+    .side-note {
+      position: absolute;
+      right: 3%;
+      top: 45%;
+      writing-mode: vertical-rl;
+      color: var(--gray);
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .section {
+      padding: 110px 8%;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(55px, 8vw, 105px);
+      letter-spacing: -2px;
+    }
+
+    .section-heading h2 span { color: var(--lime); }
+
+    .section-heading p {
+      max-width: 260px;
+      color: var(--gray);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .manifesto {
+      background: var(--lime);
+      color: var(--black);
+      padding: 85px 8%;
+      overflow: hidden;
+    }
+
+    .manifesto small {
+      font-weight: 800;
+      letter-spacing: 3px;
+      font-size: 10px;
+    }
+
+    .manifesto h2 {
+      max-width: 1050px;
+      margin-top: 28px;
+      font-size: clamp(58px, 10vw, 135px);
+      letter-spacing: -3px;
+    }
+
+    .manifesto h2 span {
+      color: transparent;
+      -webkit-text-stroke: 1.5px var(--black);
+    }
+
+    .manifesto p {
+      max-width: 440px;
+      margin-top: 30px;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .services {
+      background: var(--dark);
+    }
+
+    .service-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .service {
+      display: grid;
+      grid-template-columns: 60px 1fr auto;
+      align-items: center;
+      gap: 20px;
+      padding: 27px 5px;
+      border-bottom: 1px solid var(--line);
+      transition: padding .25s;
+    }
+
+    .service:hover { padding-left: 18px; }
+
+    .service-number {
+      color: var(--lime);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .service h3 {
+      font-size: clamp(27px, 4vw, 47px);
+      font-weight: 700;
+    }
+
+    .service-price {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 35px;
+      font-weight: 800;
+      color: var(--lime);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 16px;
+    }
+
+    .gallery-card {
+      min-height: 330px;
+      background:
+        linear-gradient(145deg, rgba(214,255,63,.12), transparent 55%),
+        #24251f;
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: flex-end;
+      padding: 25px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gallery-card:nth-child(2) { min-height: 330px; }
+    .gallery-card:nth-child(3) { min-height: 250px; }
+    .gallery-card:nth-child(4) { min-height: 250px; }
+
+    .gallery-card::before {
+      content: "ATITUDE";
+      position: absolute;
+      top: 30px;
+      left: 20px;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: clamp(65px, 10vw, 130px);
+      font-weight: 900;
+      color: rgba(243,241,233,.045);
+    }
+
+    .gallery-card span {
+      position: relative;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 27px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .gallery-card small {
+      display: block;
+      color: var(--lime);
+      font-family: "DM Sans", sans-serif;
+      font-size: 9px;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    .booking {
+      background: var(--lime);
+      color: var(--black);
+    }
+
+    .booking .eyebrow { color: #424b1e; }
+
+    .booking-layout {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .booking h2 {
+      font-size: clamp(65px, 9vw, 115px);
+      letter-spacing: -3px;
+    }
+
+    .booking-intro {
+      margin-top: 25px;
+      max-width: 350px;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .booking-form {
+      background: var(--black);
+      color: var(--white);
+      padding: 35px;
+    }
+
+    .field { margin-bottom: 20px; }
+
+    .field label {
+      display: block;
+      margin-bottom: 9px;
+      color: #bfc0b5;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .field input, .field select {
+      width: 100%;
+      height: 51px;
+      padding: 0 14px;
+      background: #20211c;
+      color: var(--white);
+      border: 1px solid #3a3b33;
+      border-radius: 0;
+      outline: none;
+    }
+
+    .field input:focus, .field select:focus {
+      border-color: var(--lime);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .booking-form .button {
+      width: 100%;
+      margin-top: 5px;
+    }
+
+    .form-note {
+      color: #999a90;
+      font-size: 10px;
+      line-height: 1.6;
+      margin-top: 14px;
+      text-align: center;
+    }
+
+    footer {
+      padding: 55px 8% 30px;
+      background: #0b0c0a;
+    }
+
+    .footer-top {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 30px;
+      padding-bottom: 45px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .footer-title {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: clamp(55px, 9vw, 110px);
+      line-height: .85;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .footer-title span { color: var(--lime); }
+
+    .footer-contact {
+      color: var(--gray);
+      font-size: 12px;
+      line-height: 2;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 22px;
+      color: #77786f;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .floating-book {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 20;
+      width: 62px;
+      height: 62px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--lime);
+      color: var(--black);
+      font-size: 25px;
+      box-shadow: 0 5px 30px rgba(0,0,0,.35);
+      transition: transform .2s;
+    }
+
+    .floating-book:hover { transform: scale(1.1); }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 850px) {
+      header { height: 72px; padding: 0 5%; }
+      nav { gap: 15px; }
+      nav a:not(.nav-cta) { display: none; }
+
+      .hero {
+        min-height: 780px;
+        align-items: flex-start;
+        padding: 75px 6% 0;
+      }
+
+      .hero-content { max-width: 100%; }
+      .hero-visual {
+        right: 5%;
+        width: 58%;
+        height: 48%;
+        opacity: .75;
+      }
+
+      .hero-copy { max-width: 330px; }
+      .side-note { display: none; }
+      .booking-layout { grid-template-columns: 1fr; gap: 35px; }
+    }
+
+    @media (max-width: 560px) {
+      .brand { font-size: 23px; }
+      .nav-cta { padding: 12px 13px; font-size: 10px; }
+
+      .hero {
+        min-height: 760px;
+        padding-top: 75px;
+      }
+
+      h1 {
+        font-size: clamp(74px, 19vw, 105px);
+        letter-spacing: -3px;
+      }
+
+      .hero-visual {
+        width: 75%;
+        height: 43%;
+        right: -2%;
+      }
+
+      .hero-actions { gap: 18px; }
+      .section { padding: 80px 6%; }
+
+      .section-heading {
+        display: block;
+        margin-bottom: 35px;
+      }
+
+      .section-heading p { margin-top: 20px; }
+
+      .manifesto { padding: 70px 6%; }
+      .manifesto h2 { font-size: 67px; }
+
+      .service {
+        grid-template-columns: 30px 1fr auto;
+        gap: 10px;
+        padding: 23px 0;
+      }
+
+      .service h3 { font-size: 26px; }
+      .service-price { font-size: 27px; }
+
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-card, .gallery-card:nth-child(n) { min-height: 230px; }
+
+      .booking-form { padding: 23px 18px; }
+      .form-row { grid-template-columns: 1fr; gap: 0; }
+
+      .footer-top {
+        display: block;
+      }
+
+      .footer-contact { margin-top: 35px; }
+
+      .footer-bottom {
+        flex-direction: column;
+        line-height: 1.7;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topline">
+    <div class="marquee">
+      <span>ATITUDE BARBER ✳ SEU ESTILO, SUA ATITUDE ✳ CORTE • BARBA • PERSONALIDADE ✳</span>
+      <span>ATITUDE BARBER ✳ SEU ESTILO, SUA ATITUDE ✳ CORTE • BARBA • PERSONALIDADE ✳</span>
+    </div>
+  </div>
+
+  <header>
+    <a href="#inicio" class="brand">
+      <span class="brand-mark">A</span>
+      ATITUDE BARBER
+    </a>
+
+    <nav>
+      <a href="#sobre">A atitude</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#agendar" class="nav-cta">Agendar horário ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <div class="eyebrow">Barbearia • Estilo • Personalidade</div>
+
+        <h1>
+          SEU ESTILO.
+          <span>SUA ATITUDE.</span>
+        </h1>
+
+        <p class="hero-copy">
+          Mais que um corte, uma identidade. Aqui cada detalhe importa.
+          Chegue com seu estilo. Saia com sua melhor versão.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#agendar" class="button">Agendar meu horário ↗</a>
+          <a href="#servicos" class="text-link">Conheça os serviços</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img class="hero-logo" src="atitude.png" alt="" onerror="this.style.display='none'">
+        <img class="john-photo" src="john.png" alt="John, barbeiro da Atitude Barber"
+             onerror="this.style.display='none'; document.getElementById('john-fallback').style.display='grid'">
+
+        <div id="john-fallback" class="photo-placeholder" style="display:none">
+          <div>
+            <strong>John</strong>
+            <span>Seu barbeiro. Sua atitude.</span>
+            <p style="font-size:10px;margin-top:12px">Adicione sua foto como john.png</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-note">Precisão em cada detalhe • Desde o primeiro corte</div>
+    </section>
+
+    <section class="manifesto" id="sobre">
+      <small>01 / NOSSA ESSÊNCIA</small>
+      <h2 class="reveal">
+        NÃO É SÓ SOBRE
+        <span>APARÊNCIA.</span>
+        É SOBRE PRESENÇA.
+      </h2>
+      <p class="reveal">
+        Acreditamos que estilo não precisa seguir regras.
+        Precisa representar quem você é. Na Atitude Barber,
+        cada atendimento é pensado para valorizar sua personalidade.
+      </p>
+    </section>
+
+    <section class="section services" id="servicos">
+      <div class="section-heading reveal">
+        <div>
+          <div class="eyebrow">02 / O QUE FAZEMOS</div>
+          <h2>SEM ENROLAÇÃO.<br><span>SÓ ESTILO.</span></h2>
+        </div>
+        <p>Escolha seu serviço e reserve um momento para cuidar de você.</p>
+      </div>
+
+      <div class="service-list">
+        <a href="#agendar" class="service reveal" data-service="Corte masculino">
+          <span class="service-number">01</span>
+          <h3>Corte masculino</h3>
+          <span class="service-price">R$ 35</span>
+        </a>
+
+        <a href="#agendar" class="service reveal" data-service="Barba">
+          <span class="service-number">02</span>
+          <h3>Barba</h3>
+          <span class="service-price">R$ 25</span>
+        </a>
+
+        <a href="#agendar" class="service reveal" data-service="Corte + barba">
+          <span class="service-number">03</span>
+          <h3>Corte + barba</h3>
+          <span class="service-price">R$ 60</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="galeria">
+      <div class="section-heading reveal">
+        <div>
+          <div class="eyebrow">03 / NOSSO TRABALHO</div>
+          <h2>O RESULTADO<br><span>FALA.</span></h2>
+        </div>
+        <p>Um espaço para mostrar os cortes, os detalhes e a identidade da Atitude.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-card reveal">
+          <span><small>01 / CORTE</small>Precisão nos detalhes</span>
+        </div>
+        <div class="gallery-card reveal">
+          <span><small>02 / ESTILO</small>Personalidade própria</span>
+        </div>
+        <div class="gallery-card reveal">
+          <span><small>03 / ACABAMENTO</small>O detalhe faz diferença</span>
+        </div>
+        <div class="gallery-card reveal">
+          <span><small>04 / ATITUDE</small>Seu visual, suas regras</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking" id="agendar">
+      <div class="section">
+        <div class="booking-layout">
+          <div class="reveal">
+            <div class="eyebrow">04 / RESERVE SEU MOMENTO</div>
+            <h2>SEU PRÓXIMO<br>CORTE COMEÇA<br><span>AQUI.</span></h2>
+            <p class="booking-intro">
+              Escolha o serviço, indique o melhor dia e horário.
+              Você será direcionado ao WhatsApp para conversar
+              diretamente com John e confirmar seu agendamento.
+            </p>
+          </div>
+
+          <form class="booking-form reveal" id="bookingForm">
+            <div class="field">
+              <label for="name">Seu nome</label>
+              <input id="name" type="text" placeholder="Como podemos te chamar?" required>
+            </div>
+
+            <div class="field">
+              <label for="service">Escolha seu serviço</label>
+              <select id="service" required>
+                <option value="">Selecione um serviço</option>
+                <option value="Corte masculino — R$ 35">Corte masculino — R$ 35</option>
+                <option value="Barba — R$ 25">Barba — R$ 25</option>
+                <option value="Corte + barba — R$ 60">Corte + barba — R$ 60</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="date">Data desejada</label>
+                <input id="date" type="date" required>
+              </div>
+
+              <div class="field">
+                <label for="time">Horário desejado</label>
+                <select id="time" required>
+                  <option value="">Escolha</option>
+                  <option>08:00</option>
+                  <option>08:30</option>
+                  <option>09:00</option>
+                  <option>09:30</option>
+                  <option>10:00</option>
+                  <option>10:30</option>
+                  <option>11:00</option>
+                  <option>13:00</option>
+                  <option>13:30</option>
+                  <option>14:00</option>
+                  <option>14:30</option>
+                  <option>15:00</option>
+                  <option>15:30</option>
+                  <option>16:00</option>
+                  <option>16:30</option>
+                  <option>17:00</option>
+                  <option>17:30</option>
+                  <option>18:00</option>
+                  <option>18:30</option>
+                  <option>19:00</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" class="button">
+              Solicitar agendamento pelo WhatsApp ↗
+            </button>
+
+            <p class="form-note">
+              O horário será confirmado diretamente com John pelo WhatsApp.
+              O envio desta solicitação não confirma automaticamente a reserva.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-title">ATITUDE<br><span>BARBER.</span></div>
+      <div class="footer-contact">
+        <p>SEU ESTILO. SUA ATITUDE.</p>
+        <p>Agendamentos pelo WhatsApp</p>
+        <p>Atendimento com John</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Atitude Barber</span>
+      <span>Feito para quem tem personalidade.</span>
+    </div>
+  </footer>
+
+  <a class="floating-book" href="#agendar" aria-label="Agendar horário">↗</a>
+
+  <script>
+    // Define hoje como a primeira data disponível no formulário.
+    const dateInput = document.getElementById("date");
+    const today = new Date();
+    const localToday = new Date(
+      today.getTime() - today.getTimezoneOffset() * 60000
+    ).toISOString().split("T")[0];
+
+    dateInput.min = localToday;
+
+    // Ao clicar em um serviço, ele já fica selecionado no formulário.
+    document.querySelectorAll(".service[data-service]").forEach(item => {
+      item.addEventListener("click", () => {
+        const serviceName = item.dataset.service;
+        const serviceSelect = document.getElementById("service");
+
+        const option = Array.from(serviceSelect.options).find(opt =>
+          opt.value.startsWith(serviceName)
+        );
+
+        if (option) serviceSelect.value = option.value;
+      });
+    });
+
+    // Envia os dados preenchidos para o WhatsApp do John.
+    document.getElementById("bookingForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const service = document.getElementById("service").value;
+      const date = document.getElementById("date").value;
+      const time = document.getElementById("time").value;
+
+      if (!name || !service || !date || !time) {
+        alert("Preencha todos os campos para continuar.");
+        return;
+      }
+
+      const [year, month, day] = date.split("-");
+      const formattedDate = `${day}/${month}/${year}`;
+
+      const message =
+        `Olá, John! Quero solicitar um agendamento na Atitude Barber.\n\n` +
+        `Nome: ${name}\n` +
+        `Serviço: ${service}\n` +
+        `Data desejada: ${formattedDate}\n` +
+        `Horário desejado: ${time}\n\n` +
+        `Podemos confirmar esse horário?`;
+
+      const phone = "5515991905433";
+      const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+      window.open(whatsappURL, "_blank");
+    });
+
+    // Anima os elementos conforme aparecem na tela.
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach(element => {
+      observer.observe(element);
+    });
+  </script>
+</body>
+</html>
+
