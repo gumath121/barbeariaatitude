@@ -1,17 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#10110e">
-
   <title>Atitude Barber — Seu estilo. Sua atitude.</title>
-
-  <meta name="description" content="Atitude Barber. Cortes masculinos, barba e estilo. Agende seu horário pelo WhatsApp.">
+  <meta name="description" content="Atitude Barber. Cortes masculinos, barba e estilo. Agende pelo WhatsApp.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
@@ -24,40 +22,18 @@
       --line: rgba(243,241,233,.17);
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       background: var(--black);
       color: var(--white);
       font-family: 'DM Sans', sans-serif;
       overflow-x: hidden;
     }
+    a { color: inherit; text-decoration: none; }
+    button, input, select { font: inherit; }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button, input, select {
-      font: inherit;
-    }
-
-    button, a {
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .container {
-      width: min(1180px, 88%);
-      margin: auto;
-    }
+    .container { width: min(1180px, 88%); margin: auto; }
 
     .section-label {
       color: var(--lime);
@@ -76,11 +52,9 @@
       font-weight: 800;
     }
 
-    .lime {
-      color: var(--lime);
-    }
+    .lime { color: var(--lime); }
 
-    /* HEADER */
+    /* CABEÇALHO: SOMENTE O LOGOTIPO */
 
     header {
       position: absolute;
@@ -88,79 +62,34 @@
       top: 0;
       left: 0;
       width: 100%;
-      padding: 25px 6%;
+      padding: 20px 6%;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       border-bottom: 1px solid rgba(255,255,255,.12);
     }
 
     .brand {
       display: flex;
+      justify-content: center;
       align-items: center;
-      gap: 12px;
     }
 
     .brand img {
-      width: 48px;
-      height: 48px;
+      width: 105px;
+      height: 85px;
       object-fit: contain;
-    }
-
-    .brand-name {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 27px;
-      font-weight: 800;
-      text-transform: uppercase;
-      line-height: .9;
-    }
-
-    .brand-name span {
-      display: block;
-      color: var(--lime);
-      font-size: 11px;
-      letter-spacing: 3px;
-      margin-top: 6px;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-    }
-
-    nav a {
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      transition: color .3s;
-    }
-
-    nav a:hover {
-      color: var(--lime);
-    }
-
-    .nav-button {
-      background: var(--lime);
-      color: var(--black);
-      padding: 14px 22px;
-      font-weight: 800;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
     }
 
     /* HERO */
 
     .hero {
       min-height: 760px;
-      padding: 130px 6% 70px;
+      padding: 150px 6% 70px;
       position: relative;
       display: flex;
       align-items: center;
       overflow: hidden;
-
       background-image:
         linear-gradient(
           90deg,
@@ -169,7 +98,6 @@
           rgba(16,17,14,.35) 100%
         ),
         url("banner.png");
-
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -256,6 +184,8 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       transition: transform .3s, background .3s;
+      border: 0;
+      cursor: pointer;
     }
 
     .primary-button:hover {
@@ -328,7 +258,7 @@
       text-transform: uppercase;
     }
 
-    /* MARQUEE */
+    /* FAIXA ANIMADA */
 
     .marquee {
       background: var(--lime);
@@ -350,10 +280,6 @@
       font-size: 22px;
       font-weight: 900;
       text-transform: uppercase;
-    }
-
-    .marquee .star {
-      font-size: 18px;
     }
 
     @keyframes marquee {
@@ -403,7 +329,7 @@
       color: rgba(16,17,14,.75);
     }
 
-    /* SERVICES */
+    /* SERVIÇOS */
 
     .services {
       padding: 120px 0;
@@ -425,9 +351,7 @@
       line-height: 1.8;
     }
 
-    .service-list {
-      border-top: 1px solid var(--line);
-    }
+    .service-list { border-top: 1px solid var(--line); }
 
     .service-item {
       padding: 28px 10px;
@@ -472,55 +396,100 @@
       font-weight: 800;
     }
 
-    /* GALLERY */
+    /* GALERIA COM FOTOS */
 
     .gallery {
       padding: 115px 0;
       background: var(--dark);
     }
 
-    .gallery-heading {
-      margin-bottom: 45px;
+    .gallery-heading { margin-bottom: 45px; }
+
+    .gallery-intro {
+      color: var(--gray);
+      font-size: 13px;
+      line-height: 1.8;
+      max-width: 420px;
+      margin-top: 20px;
     }
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
+      grid-template-columns: 1.15fr 1fr 1fr;
+      gap: 16px;
+      align-items: stretch;
     }
 
     .gallery-card {
-      min-height: 320px;
+      min-height: 420px;
       position: relative;
       overflow: hidden;
-      background:
-        linear-gradient(145deg, #292b23, #11120f);
-      display: flex;
-      align-items: flex-end;
-      padding: 25px;
+      background: #292b23;
+      isolation: isolate;
     }
 
-    .gallery-card::before {
-      content: "ATITUDE";
+    .gallery-card:first-child {
+      min-height: 490px;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 100%;
+      min-height: inherit;
+      object-fit: cover;
       position: absolute;
-      top: 20px;
-      left: 20px;
-      color: rgba(214,255,63,.16);
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 70px;
-      font-weight: 900;
+      inset: 0;
+      z-index: -2;
+      transition: transform .65s ease;
     }
 
-    .gallery-card span {
-      position: relative;
-      z-index: 1;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 27px;
+    .gallery-card:hover img {
+      transform: scale(1.07);
+    }
+
+    .gallery-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(
+        180deg,
+        transparent 35%,
+        rgba(0,0,0,.85) 100%
+      );
+    }
+
+    .gallery-caption {
+      position: absolute;
+      left: 22px;
+      right: 18px;
+      bottom: 24px;
+    }
+
+    .gallery-caption small {
+      color: var(--lime);
+      font-size: 9px;
       font-weight: 800;
+      letter-spacing: 2px;
       text-transform: uppercase;
     }
 
-    /* BOOKING */
+    .gallery-caption h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 31px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-top: 5px;
+    }
+
+    .gallery-disclaimer {
+      color: var(--gray);
+      font-size: 10px;
+      line-height: 1.6;
+      margin-top: 18px;
+    }
+
+    /* AGENDAMENTO */
 
     .booking {
       padding: 120px 0;
@@ -564,9 +533,7 @@
       margin-bottom: 25px;
     }
 
-    .form-group {
-      margin-bottom: 19px;
-    }
+    .form-group { margin-bottom: 19px; }
 
     .form-group label {
       display: block;
@@ -602,9 +569,7 @@
     }
 
     .booking-submit {
-      border: 0;
       width: 100%;
-      cursor: pointer;
       margin-top: 8px;
       font-family: 'DM Sans', sans-serif;
     }
@@ -617,7 +582,7 @@
       margin-top: 15px;
     }
 
-    /* FOOTER */
+    /* RODAPÉ */
 
     footer {
       padding: 40px 6%;
@@ -639,9 +604,7 @@
       text-transform: uppercase;
     }
 
-    .footer-brand span {
-      color: var(--lime);
-    }
+    .footer-brand span { color: var(--lime); }
 
     .footer-info {
       color: var(--gray);
@@ -657,29 +620,37 @@
       text-transform: uppercase;
     }
 
-    /* FLOATING BUTTON */
+    /* BOTÃO FLUTUANTE WHATSAPP */
 
-    .floating-booking {
+    .floating-whatsapp {
       position: fixed;
       right: 22px;
       bottom: 22px;
-      z-index: 50;
-      background: var(--lime);
-      color: var(--black);
-      padding: 16px 21px;
-      font-size: 10px;
-      font-weight: 900;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      box-shadow: 0 8px 30px rgba(0,0,0,.3);
-      transition: transform .3s;
+      z-index: 100;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 8px 28px rgba(0,0,0,.4);
+      transition: transform .25s, box-shadow .25s;
     }
 
-    .floating-booking:hover {
-      transform: translateY(-4px);
+    .floating-whatsapp:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 32px rgba(37,211,102,.35);
     }
 
-    /* ANIMATION */
+    .floating-whatsapp svg {
+      width: 33px;
+      height: 33px;
+      fill: currentColor;
+    }
+
+    /* ANIMAÇÕES */
 
     .reveal {
       opacity: 0;
@@ -692,38 +663,15 @@
       transform: translateY(0);
     }
 
-    /* MOBILE */
+    /* RESPONSIVO */
 
     @media (max-width: 800px) {
-      header {
-        padding: 18px 6%;
-      }
-
-      nav {
-        gap: 12px;
-      }
-
-      nav a:not(.nav-button) {
-        display: none;
-      }
-
-      .brand img {
-        width: 40px;
-        height: 40px;
-      }
-
-      .brand-name {
-        font-size: 23px;
-      }
-
-      .nav-button {
-        padding: 12px 14px;
-        font-size: 9px;
-      }
+      header { padding: 12px 6%; }
+      .brand img { width: 95px; height: 72px; }
 
       .hero {
         min-height: 900px;
-        padding: 115px 6% 0;
+        padding: 125px 6% 0;
         align-items: flex-start;
         background-position: center center;
       }
@@ -741,9 +689,7 @@
         z-index: 4;
       }
 
-      .hero h1 {
-        font-size: clamp(72px, 17vw, 110px);
-      }
+      .hero h1 { font-size: clamp(72px, 17vw, 110px); }
 
       .hero-description {
         max-width: 340px;
@@ -751,9 +697,7 @@
         margin-top: 20px;
       }
 
-      .hero-actions {
-        margin-top: 23px;
-      }
+      .hero-actions { margin-top: 23px; }
 
       .hero-visual {
         width: 100%;
@@ -764,7 +708,6 @@
         bottom: 0;
         transform: translateX(-50%);
         justify-content: center;
-        opacity: 1;
       }
 
       .hero-logo {
@@ -787,24 +730,16 @@
         font-size: 8px;
       }
 
-      .manifesto {
-        padding: 90px 6%;
-      }
+      .manifesto { padding: 90px 6%; }
 
-      .services,
-      .gallery,
-      .booking {
-        padding: 85px 0;
-      }
+      .services, .gallery, .booking { padding: 85px 0; }
 
       .services-heading {
         display: block;
         margin-bottom: 40px;
       }
 
-      .services-heading p {
-        margin-top: 20px;
-      }
+      .services-heading p { margin-top: 20px; }
 
       .service-item {
         grid-template-columns: 35px 1fr auto;
@@ -812,71 +747,57 @@
         padding: 22px 0;
       }
 
-      .service-number {
-        font-size: 18px;
-      }
-
-      .service-name {
-        font-size: 26px;
-      }
-
-      .service-price {
-        font-size: 28px;
-      }
+      .service-number { font-size: 18px; }
+      .service-name { font-size: 26px; }
+      .service-price { font-size: 28px; }
 
       .gallery-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
       }
 
-      .gallery-card {
-        min-height: 230px;
+      .gallery-card,
+      .gallery-card:first-child {
+        min-height: 300px;
       }
+
+      .gallery-card:first-child { grid-column: 1 / -1; }
+
+      .gallery-card:first-child img { object-position: center 35%; }
 
       .booking-grid {
         grid-template-columns: 1fr;
         gap: 40px;
       }
 
-      .booking-form {
-        padding: 25px 20px;
-      }
+      .booking-form { padding: 25px 20px; }
 
       .footer-inner {
         flex-direction: column;
         align-items: flex-start;
       }
 
-      .floating-booking {
-        right: 12px;
-        bottom: 12px;
-        padding: 14px 17px;
+      .floating-whatsapp {
+        right: 15px;
+        bottom: 15px;
+        width: 58px;
+        height: 58px;
       }
     }
 
     @media (max-width: 420px) {
-      .hero {
-        min-height: 850px;
-      }
+      .hero { min-height: 850px; }
+      .hero h1 { font-size: 72px; }
+      .hero-visual { height: 48%; }
+      .hero-actions { gap: 17px; }
+      .primary-button { padding: 16px 18px; }
+      .form-row { grid-template-columns: 1fr; gap: 0; }
 
-      .hero h1 {
-        font-size: 72px;
-      }
-
-      .hero-visual {
-        height: 48%;
-      }
-
-      .hero-actions {
-        gap: 17px;
-      }
-
-      .primary-button {
-        padding: 16px 18px;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-card,
+      .gallery-card:first-child {
+        grid-column: auto;
+        min-height: 360px;
       }
     }
 
@@ -887,31 +808,18 @@
         transition-duration: .01ms !important;
       }
 
-      .reveal {
-        opacity: 1;
-        transform: none;
-      }
+      .reveal { opacity: 1; transform: none; }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
+  <!-- CABEÇALHO COM LOGOTIPO -->
   <header>
-    <a href="#inicio" class="brand">
-      <img src="atitude.png" alt="Logo Atitude Barber">
-      <div class="brand-name">
-        ATITUDE
-        <span>BARBER</span>
-      </div>
+    <a href="#inicio" class="brand" aria-label="Atitude Barber - início">
+      <img src="atitude.png" alt="Atitude Barber">
     </a>
-
-    <nav>
-      <a href="#servicos">Serviços</a>
-      <a href="#sobre">Conceito</a>
-      <a href="#agendar" class="nav-button">Agendar horário ↗</a>
-    </nav>
   </header>
 
   <main>
@@ -945,12 +853,7 @@
       </div>
 
       <div class="hero-visual">
-        <img
-          src="atitude.png"
-          class="hero-logo"
-          alt=""
-          aria-hidden="true"
-        >
+        <img src="atitude.png" class="hero-logo" alt="" aria-hidden="true">
 
         <img
           src="john.png"
@@ -965,31 +868,23 @@
       <div class="hero-bottom">
         SEU VISUAL. SUA IDENTIDADE. SUA ATITUDE.
       </div>
-
     </section>
 
     <!-- FAIXA ANIMADA -->
     <div class="marquee">
       <div class="marquee-track">
-        <span>ATITUDE BARBER</span>
-        <span class="star">✳</span>
-        <span>SEU ESTILO</span>
-        <span class="star">✳</span>
-        <span>SUA IDENTIDADE</span>
-        <span class="star">✳</span>
-        <span>ATITUDE BARBER</span>
-        <span class="star">✳</span>
-        <span>SEU ESTILO</span>
-        <span class="star">✳</span>
-        <span>SUA IDENTIDADE</span>
-        <span class="star">✳</span>
+        <span>ATITUDE BARBER</span><span>✳</span>
+        <span>SEU ESTILO</span><span>✳</span>
+        <span>SUA IDENTIDADE</span><span>✳</span>
+        <span>ATITUDE BARBER</span><span>✳</span>
+        <span>SEU ESTILO</span><span>✳</span>
+        <span>SUA IDENTIDADE</span><span>✳</span>
       </div>
     </div>
 
     <!-- MANIFESTO -->
     <section class="manifesto" id="sobre">
       <div class="manifesto-inner reveal">
-
         <div class="section-label">01 / Nossa atitude</div>
 
         <h2>
@@ -1003,7 +898,6 @@
           vai além do espelho: é confiança, personalidade e a
           liberdade de expressar quem você é.
         </p>
-
       </div>
     </section>
 
@@ -1014,9 +908,7 @@
         <div class="services-heading reveal">
           <div>
             <div class="section-label">02 / O que fazemos</div>
-            <h2 class="section-title">
-              SERVIÇOS<span class="lime">.</span>
-            </h2>
+            <h2 class="section-title">SERVIÇOS<span class="lime">.</span></h2>
           </div>
 
           <p>
@@ -1058,32 +950,68 @@
       </div>
     </section>
 
-    <!-- GALERIA / CONCEITO -->
-    <section class="gallery">
+    <!-- GALERIA DE FOTOS ILUSTRATIVAS -->
+    <section class="gallery" id="galeria">
       <div class="container">
 
         <div class="gallery-heading reveal">
-          <div class="section-label">03 / Identidade</div>
+          <div class="section-label">03 / Estilo e personalidade</div>
+
           <h2 class="section-title">
             MAIS QUE UM CORTE<span class="lime">.</span>
           </h2>
+
+          <p class="gallery-intro">
+            O visual está nos detalhes. Inspire-se, escolha seu estilo
+            e venha construir sua próxima versão.
+          </p>
         </div>
 
         <div class="gallery-grid">
 
-          <div class="gallery-card reveal">
-            <span>Seu estilo</span>
-          </div>
+          <article class="gallery-card reveal">
+            <img
+              src="https://images.pexels.com/photos/7518742/pexels-photo-7518742.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              alt="Barbeiro trabalhando no acabamento de um cliente"
+              loading="lazy"
+            >
+            <div class="gallery-caption">
+              <small>01 / Precisão</small>
+              <h3>O detalhe faz a diferença</h3>
+            </div>
+          </article>
 
-          <div class="gallery-card reveal">
-            <span>Sua presença</span>
-          </div>
+          <article class="gallery-card reveal">
+            <img
+              src="https://images.pexels.com/photos/18298039/pexels-photo-18298039/free-photo-of-barber-trimming-customer-beard.jpeg?auto=compress&cs=tinysrgb&w=900"
+              alt="Acabamento profissional de barba"
+              loading="lazy"
+            >
+            <div class="gallery-caption">
+              <small>02 / Cuidado</small>
+              <h3>Barba alinhada</h3>
+            </div>
+          </article>
 
-          <div class="gallery-card reveal">
-            <span>Sua atitude</span>
-          </div>
+          <article class="gallery-card reveal">
+            <img
+              src="https://images.pexels.com/photos/12706272/pexels-photo-12706272.jpeg?auto=compress&cs=tinysrgb&w=900"
+              alt="Referência de corte e estilo masculino"
+              loading="lazy"
+            >
+            <div class="gallery-caption">
+              <small>03 / Identidade</small>
+              <h3>Seu estilo, sua marca</h3>
+            </div>
+          </article>
 
         </div>
+
+        <p class="gallery-disclaimer">
+          Fotos ilustrativas de referência. Os resultados e estilos
+          podem variar de acordo com cada cliente.
+        </p>
+
       </div>
     </section>
 
@@ -1113,7 +1041,6 @@
           </div>
 
           <form class="booking-form reveal" id="bookingForm">
-
             <h3>Agende seu horário.</h3>
 
             <div class="form-group">
@@ -1137,7 +1064,6 @@
             </div>
 
             <div class="form-row">
-
               <div class="form-group">
                 <label for="date">Data desejada</label>
                 <input type="date" id="date" required>
@@ -1147,7 +1073,6 @@
                 <label for="time">Horário desejado</label>
                 <input type="time" id="time" required>
               </div>
-
             </div>
 
             <button type="submit" class="primary-button booking-submit">
@@ -1158,7 +1083,6 @@
               Você será direcionado para o WhatsApp para finalizar
               sua solicitação com o profissional.
             </div>
-
           </form>
 
         </div>
@@ -1170,10 +1094,7 @@
   <!-- RODAPÉ -->
   <footer>
     <div class="footer-inner">
-
-      <div class="footer-brand">
-        ATITUDE<span>.</span>
-      </div>
+      <div class="footer-brand">ATITUDE<span>.</span></div>
 
       <div class="footer-info">
         Seu estilo. Sua atitude.
@@ -1187,17 +1108,25 @@
       >
         Fale pelo WhatsApp ↗
       </a>
-
     </div>
   </footer>
 
-  <!-- BOTÃO FLUTUANTE -->
-  <a href="#agendar" class="floating-booking">
-    Agendar horário ↗
+  <!-- BOTÃO FLUTUANTE: ABRE O WHATSAPP DIRETAMENTE -->
+  <a
+    href="https://wa.me/5515991905433?text=Ol%C3%A1%2C%20John!%20Vim%20pelo%20site%20da%20Atitude%20Barber%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio."
+    class="floating-whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Conversar diretamente pelo WhatsApp"
+    title="Fale pelo WhatsApp"
+  >
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M16.04 2.67A13.25 13.25 0 0 0 4.72 22.8L3 29.33l6.7-1.7a13.3 13.3 0 1 0 6.34-24.96Zm0 24.15a10.9 10.9 0 0 1-5.56-1.52l-.4-.24-3.98 1.01 1.03-3.87-.26-.41a10.92 10.92 0 1 1 9.17 5.03Zm6-8.18c-.33-.17-1.94-.96-2.24-1.07-.3-.11-.52-.17-.74.17-.22.33-.85 1.07-1.04 1.29-.19.22-.39.25-.72.08-.33-.17-1.4-.52-2.67-1.65-.99-.88-1.66-1.96-1.85-2.29-.19-.33-.02-.51.15-.68.15-.15.33-.39.5-.58.16-.19.22-.33.33-.55.11-.22.06-.41-.03-.58-.08-.17-.74-1.79-1.02-2.45-.27-.65-.54-.56-.74-.57h-.63c-.22 0-.58.08-.88.41-.3.33-1.15 1.13-1.15 2.75s1.18 3.19 1.34 3.41c.17.22 2.32 3.54 5.62 4.97.79.34 1.4.55 1.88.7.79.25 1.51.22 2.08.13.63-.09 1.94-.8 2.21-1.57.28-.77.28-1.43.19-1.57-.08-.14-.3-.22-.63-.39Z"/>
+    </svg>
   </a>
 
   <script>
-    // Define a data mínima como hoje
+    // Data mínima do agendamento: hoje
     const dateInput = document.getElementById("date");
 
     const today = new Date();
@@ -1227,7 +1156,7 @@
       });
     });
 
-    // Envia os dados do agendamento para o WhatsApp
+    // Formulário abre a conversa com os dados preenchidos
     document.getElementById("bookingForm").addEventListener("submit", function(event) {
       event.preventDefault();
 
@@ -1260,7 +1189,7 @@
       window.open(whatsappURL, "_blank");
     });
 
-    // Animação de entrada das seções
+    // Animações de entrada
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -1268,9 +1197,7 @@
           observer.unobserve(entry.target);
         }
       });
-    }, {
-      threshold: 0.12
-    });
+    }, { threshold: 0.12 });
 
     document.querySelectorAll(".reveal").forEach(element => {
       observer.observe(element);
