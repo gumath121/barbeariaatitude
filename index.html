@@ -17,14 +17,20 @@
       --black: #10110e;
       --dark: #191a16;
       --white: #f3f1e9;
-      --lime: #d6ff3f;
-      --gray: #85867d;
+      --lime: #c5a88a;
+      --gray: #a69a8d;
       --line: rgba(243,241,233,.17);
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       background: var(--black);
@@ -33,13 +39,21 @@
       overflow-x: hidden;
     }
 
-    a { color: inherit; text-decoration: none; }
-    button, input, select { font: inherit; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select {
+      font: inherit;
+    }
 
     ::selection {
       background: var(--lime);
       color: var(--black);
     }
+
+    /* FAIXA SUPERIOR */
 
     .topline {
       background: var(--lime);
@@ -59,12 +73,16 @@
       animation: marquee 24s linear infinite;
     }
 
-    .marquee span { padding-right: 35px; }
+    .marquee span {
+      padding-right: 35px;
+    }
 
     @keyframes marquee {
       from { transform: translateX(0); }
       to { transform: translateX(-50%); }
     }
+
+    /* CABEÇALHO */
 
     header {
       height: 86px;
@@ -109,14 +127,21 @@
       letter-spacing: 1px;
     }
 
-    nav a { transition: color .25s; }
-    nav a:hover { color: var(--lime); }
+    nav a {
+      transition: color .25s;
+    }
+
+    nav a:hover {
+      color: var(--lime);
+    }
 
     .nav-cta {
       background: var(--lime);
       color: var(--black);
       padding: 14px 20px;
     }
+
+    /* HERO */
 
     .hero {
       min-height: 690px;
@@ -134,10 +159,11 @@
       height: 550px;
       right: 4%;
       top: 10%;
-      border: 1px solid rgba(214,255,63,.22);
+      border: 1px solid rgba(197,168,138,.22);
       border-radius: 50%;
-      box-shadow: 0 0 0 55px rgba(214,255,63,.025),
-                  0 0 0 110px rgba(214,255,63,.018);
+      box-shadow:
+        0 0 0 55px rgba(197,168,138,.025),
+        0 0 0 110px rgba(197,168,138,.018);
     }
 
     .hero-content {
@@ -242,6 +268,7 @@
     .john-photo {
       position: relative;
       z-index: 1;
+      width: auto;
       max-width: 100%;
       max-height: 100%;
       object-fit: contain;
@@ -257,7 +284,7 @@
       display: grid;
       place-items: center;
       text-align: center;
-      border: 1px dashed rgba(214,255,63,.4);
+      border: 1px dashed rgba(197,168,138,.4);
       background: linear-gradient(145deg, #292b23, #11120f);
       color: var(--gray);
       padding: 30px;
@@ -287,6 +314,8 @@
       text-transform: uppercase;
     }
 
+    /* SEÇÕES */
+
     .section {
       padding: 110px 8%;
     }
@@ -304,7 +333,9 @@
       letter-spacing: -2px;
     }
 
-    .section-heading h2 span { color: var(--lime); }
+    .section-heading h2 span {
+      color: var(--lime);
+    }
 
     .section-heading p {
       max-width: 260px;
@@ -312,6 +343,8 @@
       font-size: 13px;
       line-height: 1.8;
     }
+
+    /* MANIFESTO */
 
     .manifesto {
       background: var(--lime);
@@ -345,6 +378,8 @@
       line-height: 1.8;
     }
 
+    /* SERVIÇOS */
+
     .services {
       background: var(--dark);
     }
@@ -363,7 +398,9 @@
       transition: padding .25s;
     }
 
-    .service:hover { padding-left: 18px; }
+    .service:hover {
+      padding-left: 18px;
+    }
 
     .service-number {
       color: var(--lime);
@@ -383,6 +420,8 @@
       color: var(--lime);
     }
 
+    /* GALERIA */
+
     .gallery-grid {
       display: grid;
       grid-template-columns: 1.2fr .8fr;
@@ -392,7 +431,7 @@
     .gallery-card {
       min-height: 330px;
       background:
-        linear-gradient(145deg, rgba(214,255,63,.12), transparent 55%),
+        linear-gradient(145deg, rgba(197,168,138,.12), transparent 55%),
         #24251f;
       border: 1px solid var(--line);
       display: flex;
@@ -434,12 +473,16 @@
       margin-bottom: 8px;
     }
 
+    /* AGENDAMENTO */
+
     .booking {
       background: var(--lime);
       color: var(--black);
     }
 
-    .booking .eyebrow { color: #424b1e; }
+    .booking .eyebrow {
+      color: #514333;
+    }
 
     .booking-layout {
       display: grid;
@@ -466,7 +509,9 @@
       padding: 35px;
     }
 
-    .field { margin-bottom: 20px; }
+    .field {
+      margin-bottom: 20px;
+    }
 
     .field label {
       display: block;
@@ -512,6 +557,8 @@
       text-align: center;
     }
 
+    /* RODAPÉ */
+
     footer {
       padding: 55px 8% 30px;
       background: #0b0c0a;
@@ -534,7 +581,9 @@
       text-transform: uppercase;
     }
 
-    .footer-title span { color: var(--lime); }
+    .footer-title span {
+      color: var(--lime);
+    }
 
     .footer-contact {
       color: var(--gray);
@@ -553,6 +602,8 @@
       letter-spacing: 1px;
     }
 
+    /* BOTÃO FLUTUANTE */
+
     .floating-book {
       position: fixed;
       right: 22px;
@@ -570,7 +621,11 @@
       transition: transform .2s;
     }
 
-    .floating-book:hover { transform: scale(1.1); }
+    .floating-book:hover {
+      transform: scale(1.1);
+    }
+
+    /* ANIMAÇÕES */
 
     .reveal {
       opacity: 0;
@@ -583,10 +638,19 @@
       transform: translateY(0);
     }
 
+    /* TABLET */
+
     @media (max-width: 850px) {
-      header { height: 72px; padding: 0 5%; }
+      header {
+        height: 72px;
+        padding: 0 5%;
+      }
+
       nav { gap: 15px; }
-      nav a:not(.nav-cta) { display: none; }
+
+      nav a:not(.nav-cta) {
+        display: none;
+      }
 
       .hero {
         min-height: 780px;
@@ -594,26 +658,47 @@
         padding: 75px 6% 0;
       }
 
-      .hero-content { max-width: 100%; }
+      .hero-content {
+        max-width: 100%;
+      }
+
       .hero-visual {
         right: 5%;
         width: 58%;
         height: 48%;
-        opacity: .75;
+        opacity: 1;
       }
 
-      .hero-copy { max-width: 330px; }
-      .side-note { display: none; }
-      .booking-layout { grid-template-columns: 1fr; gap: 35px; }
+      .hero-copy {
+        max-width: 330px;
+      }
+
+      .side-note {
+        display: none;
+      }
+
+      .booking-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
     }
 
+    /* CELULAR */
+
     @media (max-width: 560px) {
-      .brand { font-size: 23px; }
-      .nav-cta { padding: 12px 13px; font-size: 10px; }
+      .brand {
+        font-size: 23px;
+      }
+
+      .nav-cta {
+        padding: 12px 13px;
+        font-size: 10px;
+      }
 
       .hero {
-        min-height: 760px;
-        padding-top: 75px;
+        min-height: 850px;
+        padding: 65px 6% 0;
+        align-items: flex-start;
       }
 
       h1 {
@@ -621,24 +706,70 @@
         letter-spacing: -3px;
       }
 
-      .hero-visual {
-        width: 75%;
-        height: 43%;
-        right: -2%;
+      .hero-content {
+        width: 100%;
       }
 
-      .hero-actions { gap: 18px; }
-      .section { padding: 80px 6%; }
+      .hero-copy {
+        max-width: 310px;
+        margin-top: 22px;
+      }
+
+      .hero-actions {
+        gap: 18px;
+        margin-top: 25px;
+      }
+
+      .hero-visual {
+        width: 100%;
+        max-width: 460px;
+        height: 48%;
+        left: 50%;
+        right: auto;
+        bottom: 0;
+        transform: translateX(-50%);
+        opacity: 1;
+        justify-content: center;
+      }
+
+      .hero-logo {
+        width: 110%;
+        max-width: none;
+      }
+
+      .john-photo {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        object-position: bottom center;
+      }
+
+      .hero-visual .photo-placeholder {
+        min-height: 0;
+        height: 100%;
+        width: 90%;
+      }
+
+      .section {
+        padding: 80px 6%;
+      }
 
       .section-heading {
         display: block;
         margin-bottom: 35px;
       }
 
-      .section-heading p { margin-top: 20px; }
+      .section-heading p {
+        margin-top: 20px;
+      }
 
-      .manifesto { padding: 70px 6%; }
-      .manifesto h2 { font-size: 67px; }
+      .manifesto {
+        padding: 70px 6%;
+      }
+
+      .manifesto h2 {
+        font-size: 67px;
+      }
 
       .service {
         grid-template-columns: 30px 1fr auto;
@@ -646,24 +777,50 @@
         padding: 23px 0;
       }
 
-      .service h3 { font-size: 26px; }
-      .service-price { font-size: 27px; }
+      .service h3 {
+        font-size: 26px;
+      }
 
-      .gallery-grid { grid-template-columns: 1fr; }
-      .gallery-card, .gallery-card:nth-child(n) { min-height: 230px; }
+      .service-price {
+        font-size: 27px;
+      }
 
-      .booking-form { padding: 23px 18px; }
-      .form-row { grid-template-columns: 1fr; gap: 0; }
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-card,
+      .gallery-card:nth-child(n) {
+        min-height: 230px;
+      }
+
+      .booking-form {
+        padding: 23px 18px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
 
       .footer-top {
         display: block;
       }
 
-      .footer-contact { margin-top: 35px; }
+      .footer-contact {
+        margin-top: 35px;
+      }
 
       .footer-bottom {
         flex-direction: column;
         line-height: 1.7;
+      }
+
+      .floating-book {
+        right: 15px;
+        bottom: 15px;
+        width: 55px;
+        height: 55px;
       }
     }
 
@@ -722,8 +879,11 @@
       </div>
 
       <div class="hero-visual">
-        <img class="hero-logo" src="atitude.png" alt="" onerror="this.style.display='none'">
-        <img class="john-photo" src="john.png" alt="John, barbeiro da Atitude Barber"
+        <img class="hero-logo" src="atitude.png" alt=""
+             onerror="this.style.display='none'">
+
+        <img class="john-photo" src="john.png"
+             alt="John, barbeiro da Atitude Barber"
              onerror="this.style.display='none'; document.getElementById('john-fallback').style.display='grid'">
 
         <div id="john-fallback" class="photo-placeholder" style="display:none">
@@ -740,11 +900,13 @@
 
     <section class="manifesto" id="sobre">
       <small>01 / NOSSA ESSÊNCIA</small>
+
       <h2 class="reveal">
         NÃO É SÓ SOBRE
         <span>APARÊNCIA.</span>
         É SOBRE PRESENÇA.
       </h2>
+
       <p class="reveal">
         Acreditamos que estilo não precisa seguir regras.
         Precisa representar quem você é. Na Atitude Barber,
@@ -758,6 +920,7 @@
           <div class="eyebrow">02 / O QUE FAZEMOS</div>
           <h2>SEM ENROLAÇÃO.<br><span>SÓ ESTILO.</span></h2>
         </div>
+
         <p>Escolha seu serviço e reserve um momento para cuidar de você.</p>
       </div>
 
@@ -788,6 +951,7 @@
           <div class="eyebrow">03 / NOSSO TRABALHO</div>
           <h2>O RESULTADO<br><span>FALA.</span></h2>
         </div>
+
         <p>Um espaço para mostrar os cortes, os detalhes e a identidade da Atitude.</p>
       </div>
 
@@ -795,12 +959,15 @@
         <div class="gallery-card reveal">
           <span><small>01 / CORTE</small>Precisão nos detalhes</span>
         </div>
+
         <div class="gallery-card reveal">
           <span><small>02 / ESTILO</small>Personalidade própria</span>
         </div>
+
         <div class="gallery-card reveal">
           <span><small>03 / ACABAMENTO</small>O detalhe faz diferença</span>
         </div>
+
         <div class="gallery-card reveal">
           <span><small>04 / ATITUDE</small>Seu visual, suas regras</span>
         </div>
@@ -812,7 +979,9 @@
         <div class="booking-layout">
           <div class="reveal">
             <div class="eyebrow">04 / RESERVE SEU MOMENTO</div>
+
             <h2>SEU PRÓXIMO<br>CORTE COMEÇA<br><span>AQUI.</span></h2>
+
             <p class="booking-intro">
               Escolha o serviço, indique o melhor dia e horário.
               Você será direcionado ao WhatsApp para conversar
@@ -823,7 +992,8 @@
           <form class="booking-form reveal" id="bookingForm">
             <div class="field">
               <label for="name">Seu nome</label>
-              <input id="name" type="text" placeholder="Como podemos te chamar?" required>
+              <input id="name" type="text"
+                     placeholder="Como podemos te chamar?" required>
             </div>
 
             <div class="field">
@@ -887,6 +1057,7 @@
   <footer>
     <div class="footer-top">
       <div class="footer-title">ATITUDE<br><span>BARBER.</span></div>
+
       <div class="footer-contact">
         <p>SEU ESTILO. SUA ATITUDE.</p>
         <p>Agendamentos pelo WhatsApp</p>
@@ -903,16 +1074,17 @@
   <a class="floating-book" href="#agendar" aria-label="Agendar horário">↗</a>
 
   <script>
-    // Define hoje como a primeira data disponível no formulário.
+    // Impede selecionar uma data anterior a hoje.
     const dateInput = document.getElementById("date");
     const today = new Date();
+
     const localToday = new Date(
       today.getTime() - today.getTimezoneOffset() * 60000
     ).toISOString().split("T")[0];
 
     dateInput.min = localToday;
 
-    // Ao clicar em um serviço, ele já fica selecionado no formulário.
+    // Seleciona automaticamente o serviço escolhido na lista.
     document.querySelectorAll(".service[data-service]").forEach(item => {
       item.addEventListener("click", () => {
         const serviceName = item.dataset.service;
@@ -926,7 +1098,7 @@
       });
     });
 
-    // Envia os dados preenchidos para o WhatsApp do John.
+    // Envia a solicitação de agendamento para o WhatsApp do John.
     document.getElementById("bookingForm").addEventListener("submit", function(event) {
       event.preventDefault();
 
@@ -952,12 +1124,13 @@
         `Podemos confirmar esse horário?`;
 
       const phone = "5515991905433";
-      const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+      const whatsappURL =
+        `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
       window.open(whatsappURL, "_blank");
     });
 
-    // Anima os elementos conforme aparecem na tela.
+    // Revela os elementos quando aparecem na tela.
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -971,6 +1144,6 @@
       observer.observe(element);
     });
   </script>
+
 </body>
 </html>
-
